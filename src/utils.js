@@ -1,5 +1,6 @@
 import global from '@ckeditor/ckeditor5-utils/src/dom/global';
 import BalloonPanelView from '@ckeditor/ckeditor5-ui/src/panel/balloon/balloonpanelview';
+import katex from 'katex';
 
 export function getSelectedMathModelWidget( selection ) {
 	const selectedElement = selection.getSelectedElement();
