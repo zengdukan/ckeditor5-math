@@ -15,10 +15,13 @@
     "mini-css-extract-plugin": "2.4.2"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-autoformat": "^34.0.0",
     "@ckeditor/ckeditor5-clipboard": "^34.0.0",
     "@ckeditor/ckeditor5-core": "^34.0.0",
     "@ckeditor/ckeditor5-engine": "^34.0.0",
     "@ckeditor/ckeditor5-inspector": "^4.0.0",
+    "@ckeditor/ckeditor5-markdown-gfm": "^34.0.0",
+    "@ckeditor/ckeditor5-source-editing": "^34.0.0",
     "@ckeditor/ckeditor5-ui": "^34.0.0",
     "@ckeditor/ckeditor5-undo": "^34.0.0",
     "@ckeditor/ckeditor5-utils": "^34.0.0",

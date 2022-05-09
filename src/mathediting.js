@@ -190,9 +190,13 @@ export default class MathEditing extends Plugin {
 				} );
 
 				if ( display ) {
-					writer.insert( writer.createPositionAt( mathtexView, 0 ), writer.createText( '\\[' + equation + '\\]' ) );
+					writer.insert( writer.createPositionAt( mathtexView, 0 ), writer.createText( '$$' ) );
+					writer.insert( writer.createPositionAt( mathtexView, 1 ), writer.createContainerElement( 'div' ) );
+					writer.insert( writer.createPositionAt( mathtexView, 2 ), writer.createText( equation ) );
+					writer.insert( writer.createPositionAt( mathtexView, 3 ), writer.createContainerElement( 'div' ) );
+					writer.insert( writer.createPositionAt( mathtexView, 4 ), writer.createText( '$$' ) );
 				} else {
-					writer.insert( writer.createPositionAt( mathtexView, 0 ), writer.createText( '\\(' + equation + '\\)' ) );
+					writer.insert( writer.createPositionAt( mathtexView, 0 ), writer.createText( '$' + equation + '$' ) );
 				}
 
 				return mathtexView;

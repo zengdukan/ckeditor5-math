@@ -6,11 +6,17 @@ import Italic from "@ckeditor/ckeditor5-basic-styles/src/italic";
 import CKEditorInspector from '@ckeditor/ckeditor5-inspector';
 
 import Math from "../src/math";
+import AutoformatMath from "../src/autoformatmath";
+
+import SourceEditing from '@ckeditor/ckeditor5-source-editing/src/sourceediting';
+import Markdown from '@ckeditor/ckeditor5-markdown-gfm/src/markdown';
+
 
 ClassicEditor.create(document.querySelector("#editor"), {
-	plugins: [Essentials, Paragraph, Bold, Italic, Math],
-	toolbar: ["bold", "italic", "math"],
-	math: { engine: "katex" },
+	plugins: [Essentials, Paragraph, Bold, Italic, Math, AutoformatMath, SourceEditing],
+	toolbar: ["bold", "italic", "math",'sourceEditing'],
+		enablePreview: true, // Enable preview view
+		math: { engine: "katex", outputType: 'span' },
 })
 	.then((editor) => {
 		console.log("Editor was initialized", editor);
