@@ -26,7 +26,8 @@
     "@ckeditor/ckeditor5-undo": "^34.0.0",
     "@ckeditor/ckeditor5-utils": "^34.0.0",
     "@ckeditor/ckeditor5-widget": "^34.0.0",
-    "katex": "^0.15.3"
+    "katex": "^0.15.3",
+    "marked-extended-latex": "^1.1.0"
   },
   "devDependencies": {
     "@ckeditor/ckeditor5-basic-styles": "^34.0.0",
