@@ -12,7 +12,7 @@ import Markdown from '@ckeditor/ckeditor5-markdown-gfm/src/markdown';
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
 
 ClassicEditor.create(document.querySelector("#editor"), {
-	plugins: [Essentials, Paragraph, Bold, Italic, Math, AutoformatMath, SourceEditing,  Autoformat],
+	plugins: [Essentials, Paragraph, Bold, Italic, Math, AutoformatMath, SourceEditing,  Autoformat, Markdown],
 	toolbar: ["bold", "italic", "math",'sourceEditing'],
 		enablePreview: true, // Enable preview view
 		math: { engine: "katex", outputType: 'span' },

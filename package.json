@@ -22,6 +22,7 @@
     "@ckeditor/ckeditor5-inspector": "^4.0.0",
     "@ckeditor/ckeditor5-markdown-gfm": "^34.0.0",
     "@ckeditor/ckeditor5-source-editing": "^34.0.0",
+    "@ckeditor/ckeditor5-table": "^34.0.0",
     "@ckeditor/ckeditor5-ui": "^34.0.0",
     "@ckeditor/ckeditor5-undo": "^34.0.0",
     "@ckeditor/ckeditor5-utils": "^34.0.0",

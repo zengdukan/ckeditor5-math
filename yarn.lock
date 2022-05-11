@@ -404,6 +404,14 @@
     "@ckeditor/ckeditor5-theme-lark" "^34.0.0"
     ckeditor5 "^34.0.0"
 
+"@ckeditor/ckeditor5-table@^34.0.0":
+  version "34.0.0"
+  resolved "https://registry.npmmirror.com/@ckeditor/ckeditor5-table/-/ckeditor5-table-34.0.0.tgz#73dcdd2897aedd329a78d176e4b7dad53d1da0da"
+  integrity sha512-WbaLVol81zWK8CXr2xQ26wb8OUdECH2ZA6sclhRQxhsWq+yrbz23avkx0/CWM0vgdUp6xzEXFW70h2rxDT0yzg==
+  dependencies:
+    ckeditor5 "^34.0.0"
+    lodash-es "^4.17.15"
+
 "@ckeditor/ckeditor5-theme-lark@^34.0.0":
   version "34.0.0"
   resolved "https://registry.npmmirror.com/@ckeditor/ckeditor5-theme-lark/-/ckeditor5-theme-lark-34.0.0.tgz#56e1b62f9447a3df02ace6ddd653b59339096300"
