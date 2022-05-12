@@ -15,7 +15,7 @@ ClassicEditor.create(document.querySelector("#editor"), {
 	plugins: [Essentials, Paragraph, Bold, Italic, Math, AutoformatMath, SourceEditing,  Autoformat, Markdown],
 	toolbar: ["bold", "italic", "math",'sourceEditing'],
 		enablePreview: true, // Enable preview view
-		math: { engine: "katex", outputType: 'span' },
+		math: { engine: "katex", markdown: true},
 })
 	.then((editor) => {
 		console.log("Editor was initialized", editor);

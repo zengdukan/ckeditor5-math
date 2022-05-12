@@ -32,7 +32,8 @@ export default class MathEditing extends Plugin {
 			forceOutputType: false,
 			enablePreview: true,
 			previewClassName: [],
-			popupClassName: []
+			popupClassName: [],
+			markdown: false
 		} );
 	}
 
@@ -181,18 +182,22 @@ export default class MathEditing extends Plugin {
 		// Create view for data
 		function createMathtexView( modelItem, { writer } ) {
 			const equation = modelItem.getAttribute( 'equation' );
-			const type = modelItem.getAttribute( 'type' );
+			// const type = modelItem.getAttribute( 'type' );
 			const display = modelItem.getAttribute( 'display' );
 
-			if ( type === 'span' ) {
+			if ( mathConfig.markdown ) {
 				const mathtexView = writer.createContainerElement( 'span', {
 					class: 'math-tex'
 				} );
 
 				if ( display ) {
-					writer.insert( writer.createPositionAt( mathtexView, 0 ), writer.createText( '\\[' + equation + '\\]' ) );
+					writer.insert( writer.createPositionAt( mathtexView, 0 ), writer.createText( '$$' ) );
+					writer.insert( writer.createPositionAt( mathtexView, 1 ), writer.createEmptyElement( 'br' ) );
+					writer.insert( writer.createPositionAt( mathtexView, 2 ), writer.createText( equation ) );
+					writer.insert( writer.createPositionAt( mathtexView, 3 ), writer.createEmptyElement( 'br' ) );
+					writer.insert( writer.createPositionAt( mathtexView, 4 ), writer.createText( '$$' ) );
 				} else {
-					writer.insert( writer.createPositionAt( mathtexView, 0 ), writer.createText( '\\(' + equation + '\\)' ) );
+					writer.insert( writer.createPositionAt( mathtexView, 0 ), writer.createText( `$${ equation }$` ) );
 				}
 
 				return mathtexView;
@@ -202,7 +207,6 @@ export default class MathEditing extends Plugin {
 				} );
 
 				writer.insert( writer.createPositionAt( mathtexView, 0 ), writer.createText( equation ) );
-
 				return mathtexView;
 			}
 		}
