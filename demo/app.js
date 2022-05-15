@@ -5,11 +5,11 @@ import Bold from "@ckeditor/ckeditor5-basic-styles/src/bold";
 import Italic from "@ckeditor/ckeditor5-basic-styles/src/italic";
 import CKEditorInspector from '@ckeditor/ckeditor5-inspector';
 
-import Math from "../src/math";
+import MathBlock from "../src/math_block";
 
 ClassicEditor.create(document.querySelector("#editor"), {
-	plugins: [Essentials, Paragraph, Bold, Italic, Math],
-	toolbar: ["bold", "italic", "math"],
+	plugins: [Essentials, Paragraph, Bold, Italic, MathBlock],
+	toolbar: ["bold", "italic", "add_math_block"],
 	math: { engine: "katex" },
 })
 	.then((editor) => {

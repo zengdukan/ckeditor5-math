@@ -84,10 +84,5 @@
     "packages/*/node_modules/**",
     "packages/*/build/**",
     "packages/*/src/lib/**"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  }
+  ]
 }

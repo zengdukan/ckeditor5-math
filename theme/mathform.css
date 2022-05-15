@@ -1,34 +1,61 @@
-.ck.ck-math-form {
+/* Mermaid wrapper */
+.ck-math__wrapper {
 	display: flex;
-	align-items: flex-start;
-	flex-direction: row;
-	flex-wrap: nowrap;
-
-	@media screen and (max-width: 600px) {
-		flex-wrap: wrap;
-
-		& .ck-math-view {
-			flex-basis: 100%;
-
-			& .ck-labeled-input {
-				flex-basis: 100%;
-			}
-
-			& .ck-label {
-				flex-basis: 100%;
-			}
-		}
-
-		& .ck-button {
-			flex-basis: 50%;
-		}
-	}
+	justify-content: center;
 }
 
-.ck-math-tex.ck-placeholder::before {
-	display: none !important;
+/* Editing
+ Assigned to textarea
+ */
+.ck-math__wrapper .ck-math__editing-view {
+	padding: 16px; /* just like pre element */
+	background-color: hsla(0, 0%, 78%, 0.3); /* just like pre element */
+	min-height: 200px;
+	border: 0;
+	resize: vertical;
+	font-size: 12px; /* just like pre element */
+	outline: 0; /* just like pre element */
 }
 
-.ck.ck-toolbar-container {
-	z-index: calc(var(--ck-z-modal) + 2);
+/* Preview */
+.ck-math__preview {
+	display: flex;
+	justify-content: center;
+}
+
+/* Preview error state */
+[id^="dmath-"] {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	justify-content: center;
+}
+
+[id^="dmath-"] svg {
+	display: block;
+	width: 60%;
+	height: auto;
+}
+
+/* Source mode */
+.ck-math__source-mode .ck-math__editing-view {
+	width: 100%;
+}
+
+.ck-math__source-mode .ck-math__preview {
+	display: none;
+}
+
+/* Split mode */
+.ck-math__split-mode .ck-math__editing-view {
+	width: 50%;
+}
+
+.ck-math__split-mode .ck-math__preview {
+	width: 50%;
+}
+
+/* Preview mode */
+.ck-math__preview-mode .ck-math__editing-view {
+	display: none;
 }
