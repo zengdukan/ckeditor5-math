@@ -4,12 +4,15 @@ import Paragraph from "@ckeditor/ckeditor5-paragraph/src/paragraph";
 import Bold from "@ckeditor/ckeditor5-basic-styles/src/bold";
 import Italic from "@ckeditor/ckeditor5-basic-styles/src/italic";
 import CKEditorInspector from '@ckeditor/ckeditor5-inspector';
+import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
 
 import MathBlock from "../src/math_block";
+import MathInline from "../src/math_inline";
+import Math from "../src/math";
 
 ClassicEditor.create(document.querySelector("#editor"), {
-	plugins: [Essentials, Paragraph, Bold, Italic, MathBlock],
-	toolbar: ["bold", "italic", "add_math_block"],
+	plugins: [Essentials, Paragraph, Bold, Italic, MathBlock, MathInline, Math, Code],
+	toolbar: ["bold", "italic", "add_math_block", "add_math_inline", 'code'],
 	math: { engine: "katex" },
 })
 	.then((editor) => {
